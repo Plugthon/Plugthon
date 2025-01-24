@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/Plugthon/Plugthon"><img src="assets/plugthon.png" height="128" width="128" alt="Plugthon"/></a>
+<a href="https://github.com/Plugthon/Plugthon"><img src="https://raw.githubusercontent.com/Plugthon/Plugthon/refs/heads/master/assets/plugthon.png" height="128" width="128" alt="Plugthon"/></a>
 </p>
 
 <p align="center">

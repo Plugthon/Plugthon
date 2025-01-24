@@ -1,3 +1,4 @@
+from Plugthon import __version__
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
@@ -5,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "Plugthon",
-    version = "0.2.0",
+    version = __version__,
     packages = find_packages(),
     author = "iniridwanul",
     author_email = "iniridwanul@gmail.com",

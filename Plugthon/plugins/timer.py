@@ -28,7 +28,6 @@ class SelfDestruct:
             #Check if the message is a reply
             elif not event.reply_to:
                 raise ValueError("Please use the command in the media's reply.")
-            
             else:
                 #Get the replied message
                 get_media = await event.get_reply_message()
@@ -36,7 +35,6 @@ class SelfDestruct:
                 #Check if the replied message contains media
                 if not get_media.media:
                     raise ValueError("This function is specifically designed for downloading media files. Since the content you're attempting to download does not fall under the media category, please restrict the use of this feature to media files only.")
-                
                 else:
                     #Download the media
                     downloaded_media = await get_media.download_media()

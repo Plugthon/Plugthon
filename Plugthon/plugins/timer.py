@@ -40,10 +40,7 @@ class SelfDestruct:
                     downloaded_media = await get_media.download_media()
 
                     #Return the downloaded media path and success flag
-                    return downloaded_media, 1
+                    return downloaded_media
         except ValueError as error:
             #Store the error message
             self.error_message = error
-
-            #Returns None if any error occurs during the media download process
-            return None

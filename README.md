@@ -8,4 +8,23 @@ Plugthon is a developer-friendly library for building modular and scalable Teleg
 </p>
 
 <h2>About Plugthon</h2>
-<p title="Plugthon">Create highly customizable Telegram bots by combining pre-built and custom plugins with Plugthon.</p>
+<p title="Plugthon">Plugthon is a versatile Python library that leverages the powerful Telethon library. It offers a comprehensive collection of essential plugins designed to simplify the creation and management of userbots. By utilizing Plugthon's pre-built plugins, developers can easily incorporate advanced features into their Telegram bots, significantly saving time and effort. Whether you are a seasoned programmer or just starting, Plugthon provides a robust foundation for building custom Telegram bots tailored to your specific requirements.</p>
+
+## How to install?
+```bash
+pip install Plugthon
+```
+
+## Example Usage
+```python
+from Plugthon.plugins.hello import Greetings
+
+...
+async def hello_world(event):
+    user = Greetings()
+    message = await user.UserGreetings(event)
+    await client.send_mesage(chat, message)
+```
+
+<h2>Contribution</h2>
+<p title="Contribution">Join us! Let's explore new things together. Share your thoughts and ideas with the community.</p>

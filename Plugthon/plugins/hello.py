@@ -24,6 +24,6 @@ class Greetings:
         first_name = get_user.first_name
 
         #Construct the greeting message
-        user_greetings = f"Greetings, {first_name}!\nCongratulations! Your \"Hello World\" plugin has been successfully initialized and is now operational within the Plugthon.\n\n╭─⊸ Plugthon: {__version__}\n├─⊸ Telethon: {version.__version__}\n╰─⊸ Python: {python_version()}\n\nThank you"
+        user_greetings = f"Greetings, {first_name}!\nCongratulations! Your \"Hello World\" plugin has been successfully initialized and is now operational within the Plugthon.\n\nPlugthon: {__version__}\nTelethon: {version.__version__}\nPython: {python_version()}\n\nThank you"
 
         return user_greetings

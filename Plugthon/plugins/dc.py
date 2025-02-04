@@ -1,7 +1,7 @@
-#Import the subprocess module for executing external commands
+# Import the subprocess module for executing external commands
 import subprocess
 
-#This class represents a data center and provides methods to check the status of its servers
+# This class represents a data center and provides methods to check the status of its servers
 class DataCenter:
   def __init__(self):
     """
@@ -16,10 +16,10 @@ class DataCenter:
       "91.108.56.130"
     ]
 
-    #Set to store available data centers
+    # Set to store available data centers
     self.status = set([])
 
-    #Set to store unavailable data centers
+    # Set to store unavailable data centers
     self.failed_ping = set([])
 
   def GetDataCenterStatus(self, ip_addresses):
@@ -58,7 +58,7 @@ class DataCenter:
     for ip in self.ip_addresses:
       latency = self.GetDataCenterStatus(ip)
       if latency:
-        #If ping is successful, add to available data centers
+        # If ping is successful, add to available data centers
         if ip == self.ip_addresses[0]:
           self.status.add(f"DC1 - MIA, Miami FL, USA\nAvailable, Ping: {latency:.2f} ms\n")
         elif ip == self.ip_addresses[1]:
@@ -70,7 +70,7 @@ class DataCenter:
         elif ip == self.ip_addresses[4]:
           self.status.add(f"DC5 - SIN, Singapore, SG\nAvailable, Ping: {latency:.2f} ms")
       else:
-        #If ping fails, add to unavailable data centers
+        # If ping fails, add to unavailable data centers
         if ip == self.ip_addresses[0]:
           self.failed_ping.add(f"DC1 - MIA, Miami FL, USA is currently unavailable\n")
         elif ip == self.ip_addresses[1]:
@@ -82,7 +82,7 @@ class DataCenter:
         elif ip == self.ip_addresses[4]:
           self.failed_ping.add(f"DC5 - SIN, Singapore, SG is currently unavailable\n")
     
-    #Construct and return the formatted status message
+    # Construct and return the formatted status message
     if self.status and self.failed_ping:
       self.string_status = "\n".join(sorted(self.status))
       self.string_failed_ping = "\n".join(sorted(self.failed_ping))

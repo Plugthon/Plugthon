@@ -5,7 +5,7 @@ from platform import python_version #Import Python version
 
 # This class handles user greetings when the plugin is initialized
 class Greetings:
-    async def UserGreetings(self, event):
+    async def userGreetings(self, event):
         """
         Handles the greeting message for the user.
         Args:

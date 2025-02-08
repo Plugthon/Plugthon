@@ -11,7 +11,7 @@ class SelfDestruct:
         """
         self.error_message = ""
 
-    async def Media(self, event):
+    async def media(self, event):
         """
         Downloads the media from the replied message in a private chat. 
 

@@ -22,7 +22,7 @@ class DataCenter:
     # Set to store unavailable data centers
     self.failed_ping = set([])
 
-  def GetDataCenterStatus(self, ip_addresses):
+  def getDataCenterStatus(self, ip_addresses):
     """
     Pings the specified IP address and returns the latency in milliseconds.
 
@@ -44,7 +44,7 @@ class DataCenter:
     except subprocess.CalledProcessError:
       return None
 
-  async def DataCenterStatus(self, event):
+  async def dataCenterStatus(self, event):
     """
     Checks the status of all data centers and updates the event message.
 
@@ -56,7 +56,7 @@ class DataCenter:
     """
     await event.edit("Connecting...")
     for ip in self.ip_addresses:
-      latency = self.GetDataCenterStatus(ip)
+      latency = self.getDataCenterStatus(ip)
       if latency:
         # If ping is successful, add to available data centers
         if ip == self.ip_addresses[0]:

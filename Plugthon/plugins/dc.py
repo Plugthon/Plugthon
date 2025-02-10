@@ -1,5 +1,5 @@
 # Import the subprocess module for executing external commands
-import subprocess
+from subprocess import check_output, CalledProcessError
 
 # This class represents a data center and provides methods to check the status of its servers
 class DataCenter:
@@ -34,14 +34,14 @@ class DataCenter:
       otherwise None.
     """
     try:
-      output = subprocess.check_output(["ping", "-c", "1", "-n", "-q", ip_addresses], text=True)
+      output = check_output(["ping", "-c", "1", "-n", "-q", ip_addresses], text=True)
       lines = output.splitlines()
       for line in lines:
         if "rtt min/avg/max/mdev" in line:
           latency_str = line.split("=")[1].split("/")[1]
           latency_ms = float(latency_str)
           return latency_ms
-    except subprocess.CalledProcessError:
+    except CalledProcessError:
       return None
 
   async def dataCenterStatus(self, event):

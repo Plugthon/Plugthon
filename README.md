@@ -17,12 +17,12 @@ pip install Plugthon
 
 ## Example Usage
 ```python
-from Plugthon.plugins.hello import Greetings
+from Plugthon import Greetings
 
 ...
 async def hello_world(event):
     user = Greetings()
-    message = await user.UserGreetings(event)
+    message = await user.userGreetings(event)
     await client.send_mesage(chat, message)
 ```
 

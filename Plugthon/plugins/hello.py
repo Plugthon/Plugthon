@@ -1,7 +1,11 @@
-# Import necessary libraries
-from Plugthon import __version__ #Import Plugthon version
-from telethon import version #Import Telethon version
-from platform import python_version #Import Python version
+# Import Plugthon version
+from Plugthon import __version__
+
+# Import Telethon version
+from telethon import version
+
+# Import Python version
+from platform import python_version
 
 # This class handles user greetings when the plugin is initialized
 class Greetings:
